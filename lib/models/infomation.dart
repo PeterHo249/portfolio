@@ -2,7 +2,9 @@ import 'package:com.hoxuandung.portfolio/models/contact.dart';
 import 'package:com.hoxuandung.portfolio/models/education.dart';
 import 'package:com.hoxuandung.portfolio/models/project.dart';
 import 'package:com.hoxuandung.portfolio/models/technology.dart';
+import 'package:com.hoxuandung.portfolio/utils/social_icon_icons.dart';
 import 'package:flutter_web/material.dart';
+
 
 class Information {
   final String firstName;
@@ -48,14 +50,17 @@ final contacts = <Contact>[
     displayString: 'Ho Chi Minh, Viet Nam',
   ),
   Contact(
+    icon: SocialIcon.linkedin,
     displayString: 'linkedin.com/in/peterhoxuandung/',
     url: 'https://www.linkedin.com/in/peterhoxuandung/',
   ),
   Contact(
+    icon: SocialIcon.github_circled,
     displayString: 'github.com/PeterHo249',
     url: 'https://github.com/PeterHo249',
   ),
   Contact(
+    icon: SocialIcon.skype,
     displayString: '+84943417821',
     url: 'skype:dragonking1131?call',
   ),
