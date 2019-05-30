@@ -8,6 +8,8 @@ class Information {
   final String firstName;
   final String lastName;
   final String middleName;
+  final String title;
+  final String description;
   final String avatarUrl;
   final List<Contact> contactInfomations;
   final List<Education> educationInfomations;
@@ -19,6 +21,8 @@ class Information {
     this.lastName,
     this.middleName,
     this.avatarUrl,
+    this.title,
+    this.description,
     this.contactInfomations,
     this.educationInfomations,
     this.skills,
@@ -154,6 +158,9 @@ final information = Information(
   firstName: 'Dung',
   middleName: 'Xuan',
   lastName: 'Ho',
+  title: 'Mobile Developer',
+  description:
+      'Highly responsibility, willingness to learn new things, independent working and positive teamwork attitudes. With the knowledge and skills which I learnt in university and the experience of Flutter, Swift, I want to become part of your mobile development team to create products together.',
   contactInfomations: contacts,
   educationInfomations: educationInfomations,
   skills: skills,
