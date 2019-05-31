@@ -1,3 +1,4 @@
+import 'package:com.hoxuandung.portfolio/utils/action_data.dart';
 import 'package:com.hoxuandung.portfolio/views/about_section.dart';
 import 'package:com.hoxuandung.portfolio/views/intro_banner.dart';
 import 'package:com.hoxuandung.portfolio/views/project_section.dart';
@@ -40,9 +41,72 @@ class _HomePageState extends State<HomePage> {
 
   Widget _buildAppBar(BuildContext context) {
     return AppBar(
-      title: Text('App bar'),
+      title: InkWell(
+        onTap: () {
+          _scrollController.animateTo(
+            0.0,
+            curve: Curves.easeInOut,
+            duration: const Duration(seconds: 1),
+          );
+        },
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            CircleAvatar(
+              backgroundImage: AssetImage(
+                'img/avatar.jpg',
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                'Dung Xuan Ho',
+              ),
+            ),
+          ],
+        ),
+      ),
       backgroundColor: Colors.black54,
       elevation: 0.0,
+      actions: ActionDataEnum.actionDatas
+          .asMap()
+          .map(
+            (i, actionData) {
+              return MapEntry(
+                i,
+                _buildAppBarAction(
+                  context,
+                  actionData,
+                  MediaQuery.of(context).size.height * (i + 1),
+                ),
+              );
+            },
+          )
+          .values
+          .toList(),
+    );
+  }
+
+  Widget _buildAppBarAction(
+      BuildContext context, ActionData actionData, double offset) {
+    return InkWell(
+      onTap: () {
+        _scrollController.animateTo(
+          offset,
+          duration: const Duration(seconds: 1),
+          curve: Curves.easeInOut,
+        );
+      },
+      child: Padding(
+        padding: const EdgeInsets.all(10.0),
+        child: Center(
+          child: MediaQuery.of(context).size.width > 500.0
+              ? Text(actionData.title)
+              : Icon(actionData.icon),
+        ),
+      ),
     );
   }
 

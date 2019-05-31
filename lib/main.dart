@@ -6,7 +6,7 @@ void main() => runApp(MainApp());
 class MainApp extends StatelessWidget {
   final theme = ThemeData(
     backgroundColor: Colors.black54,
-    scaffoldBackgroundColor: Colors.black54,
+    scaffoldBackgroundColor: Colors.black87,
     fontFamily: 'NotoSansHK',
   );
 
