@@ -180,13 +180,6 @@ packages:
       url: "https://github.com/flutter/flutter_web"
     source: git
     version: "0.0.0"
-  font_awesome:
-    dependency: "direct main"
-    description:
-      name: font_awesome
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "4.7.0+1"
   front_end:
     dependency: transitive
     description:

@@ -14,5 +14,13 @@
         "asset": "fonts/SocialIcon.ttf"
       }
     ]
+  },
+  {
+    "family": "NotoSansHK",
+    "fonts": [
+      {
+        "asset": "fonts/NotoSansHK-Regular.otf"
+      }
+    ]
   }
 ]
