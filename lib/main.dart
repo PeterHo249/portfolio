@@ -7,7 +7,7 @@ class MainApp extends StatelessWidget {
   final theme = ThemeData(
     backgroundColor: Colors.black54,
     scaffoldBackgroundColor: Colors.black87,
-    fontFamily: 'NotoSansHK',
+    fontFamily: 'Nunito',
   );
 
   @override

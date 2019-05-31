@@ -46,7 +46,7 @@ class _IntroBannerState extends State<IntroBanner> {
       height: screenHeight,
       child: Center(
         child: AnimatedSwitcher(
-          duration: const Duration(seconds: 2),
+          duration: const Duration(seconds: 1),
           switchInCurve: Curves.easeInOut,
           switchOutCurve: Curves.easeInOut,
           child: Container(

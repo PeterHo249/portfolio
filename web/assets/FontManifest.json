@@ -16,10 +16,10 @@
     ]
   },
   {
-    "family": "NotoSansHK",
+    "family": "Nunito",
     "fonts": [
       {
-        "asset": "fonts/NotoSansHK-Regular.otf"
+        "asset": "fonts/Nunito-Regular.ttf"
       }
     ]
   }

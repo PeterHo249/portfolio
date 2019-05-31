@@ -46,10 +46,6 @@ final contacts = <Contact>[
     url: 'tel:+84943417821',
   ),
   Contact(
-    icon: Icons.location_on,
-    displayString: 'Ho Chi Minh, Viet Nam',
-  ),
-  Contact(
     icon: SocialIcon.linkedin,
     displayString: 'linkedin.com/in/peterhoxuandung/',
     url: 'https://www.linkedin.com/in/peterhoxuandung/',
