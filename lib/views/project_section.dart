@@ -10,7 +10,7 @@ class ProjectSection extends StatelessWidget {
 
     return Container(
       width: screenWidth,
-      height: screenHeight,
+      color: Colors.white,
       child: Text('Project'),
     );
   }

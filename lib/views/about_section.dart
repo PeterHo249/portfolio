@@ -12,6 +12,7 @@ class AboutSection extends StatelessWidget {
       width: screenWidth,
       height: screenHeight,
       child: Text('About'),
+      color: Colors.white,
     );
   }
 }

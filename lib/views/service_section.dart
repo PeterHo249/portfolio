@@ -10,7 +10,6 @@ class ServiceSection extends StatelessWidget {
 
     return Container(
       width: screenWidth,
-      height: screenHeight,
       child: Text('Service'),
     );
   }

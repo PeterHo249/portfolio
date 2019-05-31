@@ -14,6 +14,12 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   ScrollController _scrollController;
 
+  final keys = [
+    GlobalKey(),
+    GlobalKey(),
+    GlobalKey(),
+  ];
+
   @override
   void initState() {
     super.initState();
@@ -79,7 +85,7 @@ class _HomePageState extends State<HomePage> {
                 _buildAppBarAction(
                   context,
                   actionData,
-                  MediaQuery.of(context).size.height * (i + 1),
+                  keys[i],
                 ),
               );
             },
@@ -90,11 +96,14 @@ class _HomePageState extends State<HomePage> {
   }
 
   Widget _buildAppBarAction(
-      BuildContext context, ActionData actionData, double offset) {
+    BuildContext context,
+    ActionData actionData,
+    GlobalKey key,
+  ) {
     return InkWell(
       onTap: () {
-        _scrollController.animateTo(
-          offset,
+        Scrollable.ensureVisible(
+          key.currentContext,
           duration: const Duration(seconds: 1),
           curve: Curves.easeInOut,
         );
@@ -116,9 +125,15 @@ class _HomePageState extends State<HomePage> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         IntroBanner(),
-        AboutSection(),
-        ServiceSection(),
-        ProjectSection(),
+        AboutSection(
+          key: keys[0],
+        ),
+        ServiceSection(
+          key: keys[1],
+        ),
+        ProjectSection(
+          key: keys[2],
+        ),
       ],
     );
   }
