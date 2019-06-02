@@ -1,7 +1,7 @@
 import 'package:com.hoxuandung.portfolio/models/contact.dart';
 import 'package:com.hoxuandung.portfolio/models/infomation.dart';
+import 'package:com.hoxuandung.portfolio/utils/url_launcher.dart';
 import 'package:flutter_web/material.dart';
-import 'dart:js';
 
 class AboutSection extends StatelessWidget {
   const AboutSection({Key key}) : super(key: key);
@@ -233,8 +233,4 @@ class ContactButton extends StatelessWidget {
       ),
     );
   }
-}
-
-void launchUrl(String url) {
-  context.callMethod('open', [url, '_blank']);
 }

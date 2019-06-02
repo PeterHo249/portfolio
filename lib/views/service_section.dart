@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter_web/material.dart';
 
 class ServiceSection extends StatelessWidget {
