@@ -1,6 +1,7 @@
 import 'package:com.hoxuandung.portfolio/models/contact.dart';
 import 'package:com.hoxuandung.portfolio/models/infomation.dart';
 import 'package:flutter_web/material.dart';
+import 'dart:js';
 
 class AboutSection extends StatelessWidget {
   const AboutSection({Key key}) : super(key: key);
@@ -160,12 +161,17 @@ class IntroductionText extends StatelessWidget {
   Widget _buildResumeLink(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
-      child: Text(
-        'Check out my resume',
-        style: TextStyle(
-          color: Colors.blue,
-          decoration: TextDecoration.underline,
-          fontSize: 18.0,
+      child: InkWell(
+        onTap: () {
+          launchUrl('assets/resume.pdf');
+        },
+              child: Text(
+          'Check out my resume',
+          style: TextStyle(
+            color: Colors.blue,
+            decoration: TextDecoration.underline,
+            fontSize: 18.0,
+          ),
         ),
       ),
     );
@@ -216,7 +222,9 @@ class ContactButton extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: IconButton(
-        onPressed: () {},
+        onPressed: () {
+          launchUrl(contactInfo.url);
+        },
         icon: Icon(
           contactInfo.icon,
           color: Colors.white,
@@ -225,4 +233,8 @@ class ContactButton extends StatelessWidget {
       ),
     );
   }
+}
+
+void launchUrl(String url) {
+  context.callMethod('open', [url, '_blank']);
 }
