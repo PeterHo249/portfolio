@@ -84,6 +84,26 @@ final skills = <Technology>[
 
 final projects = <Project>[
   Project(
+    name: 'Dung\'s Portfolio',
+    type: ProjectTypeEnum.pet,
+    description: 'Created a portfolio for me using Flutter Web technical preview.',
+    start: DateTime(2019, 6),
+    end: DateTime(2019, 6),
+    tech: [TechnologyEnum.flutter,],
+    projectUrl: [
+      UrlInfo(
+        icon: SocialIcon.github_circled,
+        displayString: 'Repository',
+        url: 'https://github.com/PeterHo249/peterho249.github.io',
+      ),
+      UrlInfo(
+        icon: Icons.web,
+        displayString: 'Portfolio website',
+        url: 'https://peterho249.github.io',
+      ),
+    ],
+  ),
+  Project(
     name: 'Fast Store',
     type: ProjectTypeEnum.freelance,
     description:
