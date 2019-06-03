@@ -202,7 +202,7 @@ class IntroductionText extends StatelessWidget {
             children: information.contactInfomations.map(
               (contextInfo) {
                 return UrlLauncherButton(
-                  contactInfo: contextInfo,
+                  urlInfo: contextInfo,
                 );
               },
             ).toList(),

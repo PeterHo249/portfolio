@@ -108,10 +108,12 @@ final projects = <Project>[
     ],
     projectUrl: [
       UrlInfo(
+        icon: SocialIcon.apple,
         displayString: 'Get on App Store',
         url: 'https://itunes.apple.com/us/app/success-hunter/id1451431732?mt=8',
       ),
       UrlInfo(
+        icon: SocialIcon.android,
         displayString: 'Get on Play Store',
         url:
             'https://play.google.com/store/apps/details?id=com.hoxuandung.successhunter',
@@ -139,7 +141,7 @@ final projects = <Project>[
   Project(
     name: 'Rex Shop',
     type: ProjectTypeEnum.course,
-    description: 'Built a cameras and accessories shop website.',
+    description: 'Built a camera and accessory shop website.',
     start: DateTime(2018, 4),
     end: DateTime(2018, 7),
     tech: [
@@ -158,7 +160,7 @@ final projects = <Project>[
     name: 'Yame Shop',
     type: ProjectTypeEnum.course,
     description:
-        'Developed a clothes shop website with pure NodeJS and xml ﬁle.',
+        'Developed a cloth shop website with pure NodeJS and xml ﬁle.',
     start: DateTime(2018, 4),
     end: DateTime(2018, 7),
     tech: [

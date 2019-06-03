@@ -3,8 +3,8 @@ import 'package:com.hoxuandung.portfolio/utils/url_launcher.dart';
 import 'package:flutter_web/material.dart';
 
 class UrlLauncherButton extends StatelessWidget {
-  final UrlInfo contactInfo;
-  const UrlLauncherButton({Key key, this.contactInfo}) : super(key: key);
+  final UrlInfo urlInfo;
+  const UrlLauncherButton({Key key, this.urlInfo}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -12,10 +12,10 @@ class UrlLauncherButton extends StatelessWidget {
       padding: const EdgeInsets.all(8.0),
       child: IconButton(
         onPressed: () {
-          launchUrl(contactInfo.url);
+          launchUrl(urlInfo.url);
         },
         icon: Icon(
-          contactInfo.icon,
+          urlInfo.icon,
           color: Colors.white,
           size: 30.0,
         ),

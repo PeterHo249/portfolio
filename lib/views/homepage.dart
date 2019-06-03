@@ -38,6 +38,7 @@ class _HomePageState extends State<HomePage> {
       appBar: _buildAppBar(context),
       body: Container(
         child: SingleChildScrollView(
+          physics: BouncingScrollPhysics(),
           controller: _scrollController,
           child: _buildHomeBody(context),
         ),
