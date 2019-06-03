@@ -94,7 +94,7 @@ final projects = <Project>[
       UrlInfo(
         icon: SocialIcon.github_circled,
         displayString: 'Repository',
-        url: 'https://github.com/PeterHo249/peterho249.github.io',
+        url: 'https://github.com/PeterHo249/portfolio',
       ),
       UrlInfo(
         icon: Icons.web,
