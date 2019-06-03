@@ -1,6 +1,6 @@
-import 'package:com.hoxuandung.portfolio/models/contact.dart';
 import 'package:com.hoxuandung.portfolio/models/infomation.dart';
 import 'package:com.hoxuandung.portfolio/utils/url_launcher.dart';
+import 'package:com.hoxuandung.portfolio/views/url_launcher_button.dart';
 import 'package:flutter_web/material.dart';
 
 class AboutSection extends StatelessWidget {
@@ -201,35 +201,13 @@ class IntroductionText extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             children: information.contactInfomations.map(
               (contextInfo) {
-                return ContactButton(
+                return UrlLauncherButton(
                   contactInfo: contextInfo,
                 );
               },
             ).toList(),
           ),
         ],
-      ),
-    );
-  }
-}
-
-class ContactButton extends StatelessWidget {
-  final Contact contactInfo;
-  const ContactButton({Key key, this.contactInfo}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: IconButton(
-        onPressed: () {
-          launchUrl(contactInfo.url);
-        },
-        icon: Icon(
-          contactInfo.icon,
-          color: Colors.white,
-          size: 30.0,
-        ),
       ),
     );
   }

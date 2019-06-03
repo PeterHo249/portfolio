@@ -1,11 +1,12 @@
 import 'package:com.hoxuandung.portfolio/models/technology.dart';
+import 'package:com.hoxuandung.portfolio/models/url_info.dart';
 
 class Project {
   final String name;
   final String type;
   final String description;
   final List<Technology> tech;
-  final List<String> projectUrl;
+  final List<UrlInfo> projectUrl;
   final DateTime start;
   final DateTime end;
 

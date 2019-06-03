@@ -1,10 +1,9 @@
-import 'package:com.hoxuandung.portfolio/models/contact.dart';
 import 'package:com.hoxuandung.portfolio/models/education.dart';
 import 'package:com.hoxuandung.portfolio/models/project.dart';
 import 'package:com.hoxuandung.portfolio/models/technology.dart';
+import 'package:com.hoxuandung.portfolio/models/url_info.dart';
 import 'package:com.hoxuandung.portfolio/utils/social_icon_icons.dart';
 import 'package:flutter_web/material.dart';
-
 
 class Information {
   final String firstName;
@@ -13,7 +12,7 @@ class Information {
   final String title;
   final String description;
   final String avatarUrl;
-  final List<Contact> contactInfomations;
+  final List<UrlInfo> contactInfomations;
   final List<Education> educationInfomations;
   final List<Technology> skills;
   final List<Project> projects;
@@ -34,28 +33,28 @@ class Information {
   String get name => [firstName, middleName, lastName].join(' ');
 }
 
-final contacts = <Contact>[
-  Contact(
+final contacts = <UrlInfo>[
+  UrlInfo(
     icon: Icons.email,
     displayString: 'peterhoxuandung@outlook.com',
     url: 'mailto:peterhoxuandung@outlook.com',
   ),
-  Contact(
+  UrlInfo(
     icon: Icons.phone,
     displayString: '+84 943 417821',
     url: 'tel:+84943417821',
   ),
-  Contact(
+  UrlInfo(
     icon: SocialIcon.linkedin,
     displayString: 'linkedin.com/in/peterhoxuandung/',
     url: 'https://www.linkedin.com/in/peterhoxuandung/',
   ),
-  Contact(
+  UrlInfo(
     icon: SocialIcon.github_circled,
     displayString: 'github.com/PeterHo249',
     url: 'https://github.com/PeterHo249',
   ),
-  Contact(
+  UrlInfo(
     icon: SocialIcon.skype,
     displayString: '+84943417821',
     url: 'skype:dragonking1131?call',
@@ -107,9 +106,16 @@ final projects = <Project>[
       TechnologyEnum.flutter,
       TechnologyEnum.firebase,
     ],
-    projectUrl: <String>[
-      'https://itunes.apple.com/us/app/success-hunter/id1451431732?mt=8',
-      'https://play.google.com/store/apps/details?id=com.hoxuandung.successhunter',
+    projectUrl: [
+      UrlInfo(
+        displayString: 'Get on App Store',
+        url: 'https://itunes.apple.com/us/app/success-hunter/id1451431732?mt=8',
+      ),
+      UrlInfo(
+        displayString: 'Get on Play Store',
+        url:
+            'https://play.google.com/store/apps/details?id=com.hoxuandung.successhunter',
+      ),
     ],
   ),
   Project(
@@ -122,7 +128,13 @@ final projects = <Project>[
     tech: [
       TechnologyEnum.swift,
     ],
-    projectUrl: <String>['https://github.com/PeterHo249/KANBANize'],
+    projectUrl: [
+      UrlInfo(
+        icon: SocialIcon.github_circled,
+        displayString: 'Repository',
+        url: 'https://github.com/PeterHo249/KANBANize',
+      ),
+    ],
   ),
   Project(
     name: 'Rex Shop',
@@ -134,8 +146,12 @@ final projects = <Project>[
       TechnologyEnum.expressjs,
       TechnologyEnum.mongodb,
     ],
-    projectUrl: <String>[
-      'https://github.com/PeterHo249/rexshop',
+    projectUrl: [
+      UrlInfo(
+        icon: SocialIcon.github_circled,
+        displayString: 'Repository',
+        url: 'https://github.com/PeterHo249/rexshop',
+      ),
     ],
   ),
   Project(
@@ -149,8 +165,12 @@ final projects = <Project>[
       TechnologyEnum.nodejs,
       TechnologyEnum.xml,
     ],
-    projectUrl: <String>[
-      'https://github.com/PeterHo249/yameshop',
+    projectUrl: [
+      UrlInfo(
+        icon: SocialIcon.github_circled,
+        displayString: 'Repository',
+        url: 'https://github.com/PeterHo249/yameshop',
+      ),
     ],
   ),
 ];

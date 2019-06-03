@@ -28,7 +28,9 @@ class SocialIcon {
 
   static const _kFontFam = 'SocialIcon';
 
+  static const IconData android = const IconData(0xe800, fontFamily: _kFontFam);
   static const IconData github_circled = const IconData(0xf09b, fontFamily: _kFontFam);
   static const IconData linkedin = const IconData(0xf0e1, fontFamily: _kFontFam);
+  static const IconData apple = const IconData(0xf179, fontFamily: _kFontFam);
   static const IconData skype = const IconData(0xf17e, fontFamily: _kFontFam);
 }
