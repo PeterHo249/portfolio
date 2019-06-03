@@ -167,6 +167,9 @@ final projects = <Project>[
     tech: [
       TechnologyEnum.expressjs,
       TechnologyEnum.mongodb,
+      TechnologyEnum.html,
+      TechnologyEnum.css,
+      TechnologyEnum.js,
     ],
     projectUrl: [
       UrlInfo(
@@ -186,6 +189,9 @@ final projects = <Project>[
     tech: [
       TechnologyEnum.nodejs,
       TechnologyEnum.xml,
+      TechnologyEnum.html,
+      TechnologyEnum.css,
+      TechnologyEnum.js,
     ],
     projectUrl: [
       UrlInfo(

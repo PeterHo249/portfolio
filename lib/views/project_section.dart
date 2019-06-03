@@ -1,5 +1,6 @@
 import 'package:com.hoxuandung.portfolio/models/infomation.dart';
 import 'package:com.hoxuandung.portfolio/models/project.dart';
+import 'package:com.hoxuandung.portfolio/utils/url_launcher.dart';
 import 'package:com.hoxuandung.portfolio/views/url_launcher_button.dart';
 import 'package:flutter_web/material.dart';
 
@@ -210,12 +211,17 @@ class ProjectTile extends StatelessWidget {
             children: project.tech.map((tech) {
               return Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: Container(
-                  width: 70.0,
-                  height: 70.0,
-                  child: Image(
-                    image: AssetImage(tech.logoUrl),
-                    fit: BoxFit.contain,
+                child: InkWell(
+                  onTap: () {
+                    launchUrl(tech.referenceUrl);
+                  },
+                  child: Container(
+                    width: 70.0,
+                    height: 70.0,
+                    child: Image(
+                      image: AssetImage(tech.logoUrl),
+                      fit: BoxFit.contain,
+                    ),
                   ),
                 ),
               );
