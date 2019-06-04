@@ -8,6 +8,8 @@ class ServiceSection extends StatelessWidget {
     double screenWidth = MediaQuery.of(context).size.width;
     double screenHeight = MediaQuery.of(context).size.height;
 
+    screenHeight = screenHeight > 750.0 ? screenHeight : 750.0;
+
     return Container(
       width: screenWidth,
       height: screenHeight,

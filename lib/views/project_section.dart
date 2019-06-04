@@ -204,10 +204,9 @@ class ProjectTile extends StatelessWidget {
               fontSize: 20.0,
             ),
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisSize: MainAxisSize.min,
+          Wrap(
+            runAlignment:
+                isEvenPositon ? WrapAlignment.start : WrapAlignment.end,
             children: project.tech.map((tech) {
               return Padding(
                 padding: const EdgeInsets.all(8.0),
@@ -216,8 +215,8 @@ class ProjectTile extends StatelessWidget {
                     launchUrl(tech.referenceUrl);
                   },
                   child: Container(
-                    width: 70.0,
-                    height: 70.0,
+                    width: 50.0,
+                    height: 50.0,
                     child: Image(
                       image: AssetImage(tech.logoUrl),
                       fit: BoxFit.contain,
