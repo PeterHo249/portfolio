@@ -201,6 +201,42 @@ final projects = <Project>[
       ),
     ],
   ),
+  Project(
+    name: 'Quick Note',
+    type: ProjectTypeEnum.course,
+    description:
+        'Developed a note tool for Windows, using hotkey to add note. It\'s written in C/C++ and Win32 API.',
+    start: DateTime(2017, 12),
+    end: DateTime(2018, 1),
+    tech: [
+      TechnologyEnum.cpp,
+    ],
+    projectUrl: [
+      UrlInfo(
+        icon: SocialIcon.github_circled,
+        displayString: 'Repository',
+        url: 'https://github.com/PeterHo249/quicknote',
+      ),
+    ],
+  ),
+  Project(
+    name: 'Five in a row game',
+    type: ProjectTypeEnum.course,
+    description:
+        'Developed ﬁve in a row game can be play on console screen. It provide 2 play mode: person-vs-person and person-vs-computer. ',
+    start: DateTime(2016, 12),
+    end: DateTime(2017, 1),
+    tech: [
+      TechnologyEnum.cpp,
+    ],
+    projectUrl: [
+      UrlInfo(
+        icon: SocialIcon.github_circled,
+        displayString: 'Repository',
+        url: 'https://github.com/PeterHo249/ﬁve_in_a_row',
+      ),
+    ],
+  ),
 ];
 
 final information = Information(

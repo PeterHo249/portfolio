@@ -61,4 +61,10 @@ class TechnologyEnum {
     name: 'XML',
     referenceUrl: 'https://www.xml.com/',
   );
+
+  static final cpp = Technology(
+    logoUrl: 'img/c++.png',
+    name: 'C++',
+    referenceUrl: 'www.cplusplus.com/doc',
+  );
 }
