@@ -46,8 +46,8 @@ final contacts = <UrlInfo>[
   ),
   UrlInfo(
     icon: SocialIcon.linkedin,
-    displayString: 'linkedin.com/in/peterhoxuandung/',
-    url: 'https://www.linkedin.com/in/peterhoxuandung/',
+    displayString: 'linkedin.com/in/hoxuandung/',
+    url: 'https://www.linkedin.com/in/hoxuandung/',
   ),
   UrlInfo(
     icon: SocialIcon.github_circled,
